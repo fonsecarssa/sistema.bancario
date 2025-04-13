@@ -13,13 +13,13 @@ Este é um simples sistema de banco em Python que permite realizar três operaç
 1. Clone este repositório em sua máquina:
 
     ```bash
-    git clone https://github.com/seuusuario/banco-python.git
+    git clone https://github.com/seuusuario/sistema.bancario.git
     ```
 
 2. Acesse o diretório do projeto:
 
     ```bash
-    cd banco-python
+    cd sistema.bancario
     ```
 
 3. Execute o script Python:
