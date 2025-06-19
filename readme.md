@@ -33,7 +33,8 @@ Este é um simples sistema de banco em Python que permite realizar três operaç
     - **1** para depositar
     - **2** para sacar
     - **3** para visualizar o extrato
-    - **4** para sair
+    - **4** para cadastrar um usuário
+    - **5** para sair
 
 ## Como funciona
 
@@ -42,7 +43,8 @@ Ao iniciar o programa, o menu principal será exibido com as opções disponíve
 - **1 para depositar**: Permite adicionar dinheiro à conta.
 - **2 para sacar**: Permite retirar dinheiro da conta, respeitando os limites estabelecidos.
 - **3 para visualizar o extrato**: Exibe o histórico de transações e o saldo atual.
-- **4 para sair**: Encerra o programa.
+- **4 para cadastrar um usuário**: Cadastra um usuário com nome, CPF, logradouro, etc.
+- **5 para sair**: Encerra o programa.
 
 ### Detalhes das Operações
 
@@ -68,6 +70,7 @@ O extrato lista todas as transações realizadas (depósitos e saques) e o saldo
 - **`depositar()`**: Realiza o depósito e registra a transação, verificando se o valor é positivo.
 - **`saque()`**: Realiza o saque e verifica as condições de saldo, limite e saques diários.
 - **`extrato()`**: Exibe o extrato com o histórico das transações e o saldo atual.
+- **`criarusuario() `**: Realiza o cadastro do usuário.
 
 ## Exemplo de Execução
 
@@ -81,7 +84,8 @@ O extrato lista todas as transações realizadas (depósitos e saques) e o saldo
                      [1] Depositar
                      [2] Sacar
                      [3] Extrato
-                     [4] Sair
+                     [4] Criar Usuário
+                     [5] Sair
 --------------------------------------------
 
 --------------------------------------------
@@ -138,6 +142,29 @@ Saque: R$ 50.00
           => Total de saques: 1
           => Saldo atual: R$ 50.00
 ------------------------------------------------
+
+### Exemplo de Criar Usuário
+
+--------------------------------------------
+            Cadastro de Usuário:
+--------------------------------------------
+
+Informe seu CPF (Somente números): 12345678900
+Informe o nome completo: João da Silva
+Informe a data de nascimento (dd/mm/aaaa): 01/01/1990
+Informe o endereço (logradouro, nro - bairro - cidade/sigla estado): Rua A, 123 - Centro - São Paulo/SP
+
+Usuário cadastrado com sucesso!
+
+--Se o CPF ja tiver sido cadastrado:
+
+--------------------------------------------
+            Cadastro de Usuário:
+--------------------------------------------
+
+Informe seu CPF (Somente números): 12345678900
+
+Erro: Já existe um usuário com esse CPF!
 
 
 ## Contribuindo
