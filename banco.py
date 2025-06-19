@@ -1,4 +1,4 @@
-#contém 3 operações: deposito, saque e extrato
+#contém 3 operações: deposito, saque, extrato e cadastro de usuário
 
 
 transacoes = list()
