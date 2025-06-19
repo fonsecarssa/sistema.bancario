@@ -19,7 +19,8 @@ def menu():
                     [1] Depositar
                     [2] Sacar
                     [3] Extrato
-                    [4] Sair
+                    [4] Criar Usuário
+                    [5] Sair
         --------------------------------------------
     ''')   
     return (input('''
@@ -123,7 +124,34 @@ def extrato():
             => Total de saques: {saques_diarios}
             => Saldo atual: R$ {saldo:.2f}
         ------------------------------------------------
-            ''')   
+            ''') 
+
+usuarios = list()  
+def criarusuario():
+    print('''
+    --------------------------------------------
+                Cadastro de Usuário:
+    --------------------------------------------''')
+
+    cpf = int(input('Informe seu CPF (Somente números): '))
+
+    usuario_existente = [usuario for usuario in usuarios if usuario["cpf"] == cpf]
+    if usuario_existente:
+        print("Erro: Já existe um usuário com esse CPF!")
+        return
+
+    nome = input("Informe o nome completo: ").strip()
+    nascimento = input("Informe a data de nascimento (dd/mm/aaaa): ").strip()
+    endereco = input("Informe o endereço (logradouro, nro - bairro - cidade/sigla estado): ").strip()
+
+    usuarios.append({
+        "nome": nome,
+        "nascimento": nascimento,
+        "cpf": cpf,
+        "endereco": endereco
+    })
+
+    print("Usuário cadastrado com sucesso!")
 
 #loop principal do programa
 
@@ -136,6 +164,8 @@ while True:
     elif opcao == "3":
         extrato()
     elif opcao == "4":
+        criarusuario()       
+    elif opcao == "5":
         print('''
         --------------------------------------------
                     Saindo do sistema...
